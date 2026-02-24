@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Minimal Portfolio 🌸</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for cute icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastel: {
+                            pink: '#FFD1DC',
+                            blue: '#AEC6CF',
+                            yellow: '#FDFD96',
+                            purple: '#C8A2C8',
+                            green: '#B2EBF2',
+                            bg: '#FAFAFA'
+                        },
+                        text: {
+                            main: '#5C5470',
+                            light: '#9E94B5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Mali', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 25px -5px rgba(255, 209, 220, 0.4)',
+                        'cute': '0 4px 14px 0 rgba(200, 162, 200, 0.39)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-pastel-bg text-text-main font-sans overflow-x-hidden selection:bg-pastel-pink selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 left-0 z-50 p-4 transition-all duration-300" id="navbar">
+        <div class="max-w-4xl mx-auto backdrop-blur-md bg-white/70 rounded-full px-6 py-3 shadow-sm flex justify-between items-center border border-white/50">
+            <a href="#" class="text-xl font-bold tracking-wider hover-wiggle">✨ Portfo<span class="text-pastel-purple">lio</span></a>
+            <ul class="flex space-x-6 text-text-main font-medium">
+                <li><a href="#about" class="hover:text-pastel-pink transition-colors">เกี่ยวกับเรา</a></li>
+                <li><a href="#projects" class="hover:text-pastel-blue transition-colors">ผลงาน</a></li>
+                <li><a href="#contact" class="hover:text-pastel-purple transition-colors">ติดต่อ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-4 relative">
+        <div class="absolute top-20 left-10 w-24 h-24 bg-pastel-yellow rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div class="absolute top-20 right-10 w-24 h-24 bg-pastel-pink rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-24 h-24 bg-pastel-blue rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+
+        <div class="reveal-up z-10 mt-10">
+            <div class="w-48 h-48 mx-auto mb-8 bg-gradient-to-tr from-pastel-pink to-pastel-blue rounded-[40%_60%_70%_30%/40%_50%_60%_50%] shadow-soft p-1 blob-shape floating overflow-hidden border-4 border-white">
+                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix&backgroundColor=transparent" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <p class="text-pastel-purple font-semibold tracking-widest text-sm mb-2 uppercase">Hello World 👋</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-text-main hover-wiggle inline-block cursor-default">สวัสดี! เราชื่อ ...</h1>
+            <p class="text-lg md:text-xl text-text-light max-w-lg mx-auto mb-8">
+                นักพัฒนาเว็บไซต์ที่หลงรักในความมินิมอลและสีพาสเทล ยินดีต้อนรับสู่พื้นที่เล็กๆ ของเรา 🌸
+            </p>
+            <a href="#projects" class="inline-block bg-pastel-pink text-white px-8 py-3 rounded-full font-semibold shadow-cute hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                ดูผลงานของเรา <i class="fa-solid fa-arrow-down ml-2 group-hover:animate-bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white/50 backdrop-blur-sm relative">
+        <div class="max-w-4xl mx-auto rounded-3xl bg-white shadow-soft p-8 md:p-12 border border-pastel-pink/20 reveal-up">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/3">
+                    <div class="aspect-square rounded-2xl bg-pastel-yellow/30 flex items-center justify-center text-6xl floating border-2 border-dashed border-pastel-yellow" style="animation-delay: 1s;">
+                        🎨
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-bold mb-4 text-pastel-purple">เกี่ยวกับเรา ✨</h2>
+                    <p class="text-text-main leading-relaxed mb-4 text-lg">
+                        เราคือคนที่ชอบสร้างสรรค์ผลงานที่ดูสะอาดตา (Minimal) และใช้งานง่าย เราเชื่อว่าดีไซน์ที่น่ารักจะช่วยให้ผู้ใช้มีความสุขในการใช้งานมากขึ้น หากโค้ดคือเวทมนตร์ เราก็คือพ่อมดแม่มดฝึกหัด! 🧙‍♀️
+                    </p>
+                    <p class="text-text-light leading-relaxed">
+                        ทักษะหลัก: 
+                        <span class="inline-block bg-pastel-pink/20 text-pastel-pink px-3 py-1 rounded-full text-sm font-semibold mx-1 mt-2 shadow-sm hover:scale-110 transition-transform">HTML</span>
+                        <span class="inline-block bg-pastel-blue/20 text-pastel-blue px-3 py-1 rounded-full text-sm font-semibold mx-1 mt-2 shadow-sm hover:scale-110 transition-transform">CSS</span>
+                        <span class="inline-block bg-pastel-purple/20 text-pastel-purple px-3 py-1 rounded-full text-sm font-semibold mx-1 mt-2 shadow-sm hover:scale-110 transition-transform">Tailwind</span>
+                        <span class="inline-block bg-pastel-yellow/40 text-yellow-600 px-3 py-1 rounded-full text-sm font-semibold mx-1 mt-2 shadow-sm hover:scale-110 transition-transform">JavaScript</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12 reveal-up">
+                <h2 class="text-3xl font-bold mb-2 text-pastel-blue">ผลงานของเรา 💻</h2>
+                <p class="text-text-light">โปรเจกต์ที่เราตั้งใจทำ</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-cute transition-all duration-300 group reveal-up border border-gray-100 hover:-translate-y-2 cursor-pointer">
+                    <div class="h-48 bg-pastel-pink/30 flex items-center justify-center overflow-hidden relative">
+                        <i class="fa-solid fa-cat text-5xl text-pastel-pink group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300"></i>
+                        <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-text-main group-hover:text-pastel-pink transition-colors">Cat App</h3>
+                        <p class="text-text-light text-sm mb-4">แอปพลิเคชันสอนเลี้ยงแมวสุดแสนจะน่ารัก</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-gray-50 px-2 py-1 rounded-full text-gray-500 border border-gray-100">HTML</span>
+                            <span class="text-xs bg-gray-50 px-2 py-1 rounded-full text-gray-500 border border-gray-100">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-cute transition-all duration-300 group reveal-up border border-gray-100 hover:-translate-y-2 cursor-pointer" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-pastel-blue/30 flex items-center justify-center overflow-hidden relative">
+                        <i class="fa-solid fa-cloud-sun text-5xl text-pastel-blue group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-text-main group-hover:text-pastel-blue transition-colors">Weather Widget</h3>
+                        <p class="text-text-light text-sm mb-4">วิดเจ็ตพยากรณ์อากาศที่มีธีมเปลี่ยนแปลงตามช่วงเวลา</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-gray-50 px-2 py-1 rounded-full text-gray-500 border border-gray-100">JS</span>
+                            <span class="text-xs bg-gray-50 px-2 py-1 rounded-full text-gray-500 border border-gray-100">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-cute transition-all duration-300 group reveal-up border border-gray-100 hover:-translate-y-2 cursor-pointer" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-pastel-purple/30 flex items-center justify-center overflow-hidden relative">
+                        <i class="fa-solid fa-book-heart text-5xl text-pastel-purple group-hover:scale-110 group-hover:animate-bounce transition-transform duration-300"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-text-main group-hover:text-pastel-purple transition-colors">To-Do Cute</h3>
+                        <p class="text-text-light text-sm mb-4">แอปจดบันทึกและจัดการตารางงาน สไตล์ Bullet Journal</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-gray-50 px-2 py-1 rounded-full text-gray-500 border border-gray-100">React</span>
+                            <span class="text-xs bg-gray-50 px-2 py-1 rounded-full text-gray-500 border border-gray-100">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 mb-4">
+        <div class="max-w-2xl mx-auto text-center bg-pastel-green/20 rounded-[3rem] p-12 reveal-up border border-pastel-green/30 relative overflow-hidden shadow-soft">
+            <!-- Decorative shapes -->
+            <div class="absolute top-4 left-4 text-pastel-green opacity-50 text-2xl animate-spin-slow cursor-default">✨</div>
+            <div class="absolute bottom-8 right-8 text-pastel-blue opacity-50 text-3xl floating cursor-default">🌟</div>
+            
+            <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-3xl mb-6 shadow-cute floating">
+                💌
+            </div>
+            <h2 class="text-3xl font-bold mb-4 text-text-main">มาคุยกันเถอะ!</h2>
+            <p class="text-text-light mb-8 max-w-md mx-auto">หากสนใจในผลงาน ทักทายมาเล่นๆ หรือมีโปรเจกต์คู่ใจอยากให้เราร่วมงาน ติดต่อมาได้เลย ยินดีเสมอ! 💖</p>
+            
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-pastel-pink shadow-cute hover:-translate-y-2 hover:bg-pastel-pink hover:text-white transition-all duration-300 text-xl">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-pastel-blue shadow-cute hover:-translate-y-2 hover:bg-pastel-blue hover:text-white transition-all duration-300 text-xl">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-pastel-purple shadow-cute hover:-translate-y-2 hover:bg-pastel-purple hover:text-white transition-all duration-300 text-xl">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            
+            <a href="mailto:hello@example.com" class="inline-block bg-white text-text-main border-2 border-pastel-blue px-8 py-3 rounded-full font-semibold shadow-sm hover:bg-pastel-blue hover:text-white transition-colors duration-300">
+                Say Hello!
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-text-light text-sm">
+        <p>Made with <i class="fa-solid fa-heart text-pastel-pink mx-1 animate-pulse"></i> by <span class="font-bold text-text-main">Me</span> © 2026</p>
+    </footer>
+
+    <!-- Interactive cute cursor companion -->
+    <div id="cursor-companion" class="fixed pointer-events-none z-50 transition-transform duration-100 text-2xl h-8 w-8 items-center justify-center hidden md:flex" style="transform: translate(-50%, -50%);">
+        ✨
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

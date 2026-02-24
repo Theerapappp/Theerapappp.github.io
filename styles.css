@@ -1,0 +1,99 @@
+/* Custom Animations and Cute Effects */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar in pastel colors */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #FAFAFA;
+}
+::-webkit-scrollbar-thumb {
+    background: #FFD1DC;
+    border-radius: 10px;
+    border: 2px solid #FAFAFA;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #AEC6CF;
+}
+
+/* Base text selection */
+::selection {
+    background-color: #FFD1DC;
+    color: #fff;
+}
+
+/* Cute Blob animations for background */
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-blob {
+    animation: blob 7s infinite;
+}
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Floating animation */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+.floating {
+    animation: floating 3.5s ease-in-out infinite;
+}
+
+/* Wiggle animation on hover */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+}
+.hover-wiggle:hover {
+    animation: wiggle 0.4s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Slow spin */
+@keyframes spin-slow {
+    100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 10s linear infinite;
+}
+
+/* Blob shape morphing */
+@keyframes morph {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+    67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+}
+.blob-shape {
+    animation: morph 8s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+/* Reveal classes for JavaScript intersection observer */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
